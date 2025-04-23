@@ -5,39 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Responsive Layout</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image: url('./pexels-souvenirpixels-414612.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .flex-box-container{
+            display: flex;
+            justify-content: center;
+        }
         .container{
-            width: 500px;
+            width: 500px; 
             height: 500px;
             border: 5px solid #980980;
-            display: flex;
-                  
+            display: flex;    
             align-items: center;
             flex-wrap: wrap-reverse;
             justify-content: space-around;
-            gap: 12px;
+            gap: 8px;
             
 
         }
         .circle{
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background: rgb(12, 39, 215);
             border-radius: 50%;
             text-align: center;
             color: bisque;
             padding-top: 20px;
+        } 
+        header{
+            position: sticky; 
+            top: 0px;
+            padding: 20px;
+            background-color: #111317;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            
+            
+        }
 
+        nav a{
+            text-decoration: none;
+            font-size: 25px;
+            color: #FFFFFF;
+            
+        }
+        .nav-menu{
+            display: flex;
+            gap: 20px;
+        }
+        .login-container{
+            height: 90vh;
+            align-items: center;
+            margin-top: 2rem;
+            display: flex;
+           justify-content: center;
+            
+        }
+        .login-form{
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            
+            
+        } 
+        .login-form input{
+            margin-top: 10px;
+            padding: 10px;
+        }.login-form h1{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }.calendar{
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 100px;
+        } .calendar-nav-div{
+            background-image: url('./bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 15px;
+        } .calendar-nav{
+            align-items: center;
+        }
+
+        .calendar-nav h1{
+            font-size: 30px;
+            color: #fffefd;
+        } .calendar-nav ul{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            color: red;
+        }
+        .nav-a{
+            font-size: 12px;
+            padding-left: 30%;
+        }
+        .div-calender{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        } 
+        .div-calender h1{
+            color: #fff;
+        }
+        .div-calender span{
+            color: red;
+        } 
+        .date-container{
+            display: grid;
+            grid-template-columns: repeat(7 , 1fr);
+            grid-gap: 2px;
+            background: rgba(255, 255, 0, 0.165);
+            margin-top: 10px;
+        }
+        .date , .day{
+            border: 1px solid gray;
+            border-radius: 1px;
+            font-weight: 700;
+            font-size: 1.8rem;
+            padding: 15px;
+            display: flex;  
+            justify-content: center;
+            color: #D3FFFE;
+
+        }
+        .date-1{
+            background: rgba(255, 0, 0, 0.968);
+            color: white;
+
+        }
+        .holyday{
+            color: #D3FFFE;
+            margin-top: 10px;
+            line-height: 25px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-menu">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">BLog</a>
+                <a href="">Contact</a>
+            </div>
+            <a href="">LogIn</a>
+        </nav>
+        
+    </header>
     <h1 style="text-align: center;">Flex box Layout</h1>
-    <div class="container">
-        <div class="circle">Circle 1</div>
-        <div class="circle">Circle 2</div>
-        <div class="circle">Circle 3</div>
-        <div class="circle">Circle 4</div>
-        <div class="circle">Circle 5</div>
-    </div>
+    <main>
+        <section class="flex-box-container">
+            <div class="container">
+                <div class="circle">Circle 1</div>
+                <div class="circle">Circle 2</div>
+                <div class="circle">Circle 3</div>
+                <div class="circle">Circle 4</div>
+                <div class="circle">Circle 5</div>
+            </div>
+        </section>       
+        <section class="login-container">         
+                <form action="" class="login-form">
+                    <h1>Please Log In First</h1>
+                    <input type="text" placeholder="Your First Name" required>
+                    <input type="text" placeholder="Your Last Name" required>
+                    <input type="email" name="" id="" placeholder="Your Email" required>
+                    <input type="number" name="" id="" placeholder="Your Call" required>
+                    <input type="password" name="" id="" placeholder="password" required>
+                    <input type="submit" value="Submit">
+                </form>
+        </section>
+        <section class="calendar">
+            <div class="calendar-nav-div">
+                <nav class="calendar-nav">
+                    <img src="/national-housing-logo.png" alt="">
+                    <div>
+                        <h1>National Housing Finance PLC.</h1>
+                        <p>
+                            <a class="nav-a" href="https://www.nationalhousingbd.com/" target="_blank">www.nationalhousingbd.com</a>
+                        </p>
+                    </div>
+                    <ul>
+                        <li>HOME LOAN</li>
+                        <li>SME LOAN</li>
+                        <li>DEPOSIT SCHEMES</li>
+                        <li>SHARI'AH BASED FINANCE</li>
+                        <li>MUDARABA DEPOSIT</li>
+                    </ul>
+                </nav>
+                <div class="div-calender">
+                    <h1>APRIL <span>  2025 </span></h1>
+                    <div>
+                        <span>চৈত্র ১৪৩১ - বৈশাখ ১৪৩২ </span> <br>
+                        <small style="color: rgb(171, 157, 157);">Shawwal 1446 - Dhul Qadah 1446</small>
+                        
+                    </div>
+                   
+                </div>
+                <div class="date-container">
+                    <div class="day">SUN</div>
+                    <div class="day">MON</div>
+                    <div class="day">TUE</div>
+                    <div class="day">WED</div>
+                    <div class="day">THU</div>
+                    <div class="day">FRI</div>
+                    <div class="day">SAT</div>
+                    <div class="date">30</div>
+                    <div class="date">31</div>
+                    <div class="date date-1">1</div>
+                    <div class="date date-1">2</div>
+                    <div class="date">3</div>
+                    <div class="date">4</div>
+                    <div class="date">5</div>
+                    <div class="date">6</div>
+                    <div class="date">7</div>
+                    <div class="date">8</div>
+                    <div class="date">9</div>
+                    <div class="date">10</div>
+                    <div class="date">11</div>
+                    <div class="date">12</div>
+                    <div class="date">13</div>
+                    <div class="date date-1">14</div>
+                    <div class="date">15</div>
+                    <div class="date">16</div>
+                    <div class="date">17</div>
+                    <div class="date">18</div>
+                    <div class="date">19</div>
+                    <div class="date">20</div>
+                    <div class="date">21</div>
+                    <div class="date">22</div>
+                    <div class="date">23</div>
+                    <div class="date">24</div>
+                    <div class="date">25</div>
+                    <div class="date">26</div>
+                    <div class="date">27</div>
+                    <div class="date">28</div>
+                    <div class="date">29</div>
+                    <div class="date">30</div>
+                    
+                </div>
+                <div class="holyday" >
+                    <p>**1-2 APRIL: Eid-Ul-Fitr</p>
+                    <p>**14  APRIL : Bangali New year 1432</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
